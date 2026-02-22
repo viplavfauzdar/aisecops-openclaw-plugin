@@ -1,0 +1,31 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Build / Pack artifacts
+dist/
+build/
+*.tgz
+
+# IDE
+.vscode/
+.idea/
+
+# OpenClaw local artifacts (just in case)
+.openclaw/

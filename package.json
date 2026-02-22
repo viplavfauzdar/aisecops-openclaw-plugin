@@ -1,0 +1,13 @@
+{
+  "name": "@viplav/aisecops-openclaw-plugin",
+  "version": "0.1.0",
+  "description": "AISecOps Enterprise Tool Adapter for OpenClaw",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "aisecops-openclaw-plugin",
+  "name": "AISecOps Tool Adapter",
+  "version": "0.1.0",
+  "description": "Routes OpenClaw tool calls through AISecOps for policy, audit, and sandboxed execution.",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "baseUrl": {
+        "type": "string",
+        "title": "AISecOps Base URL",
+        "description": "Base URL for AISecOps Gateway/ToolRunner (e.g., https://aisecops.yourcorp.com)."
+      }
+    },
+    "additionalProperties": true
+  }
+}
