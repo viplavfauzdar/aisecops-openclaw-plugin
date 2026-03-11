@@ -8,6 +8,55 @@ Enterprise Tool Adapter for routing OpenClaw tool execution through an external 
 
 ---
 
+## 🔗 Related Project: AISecOps Runtime Gateway Hybrid
+
+This plugin was originally developed alongside the **AISecOps Runtime Gateway Hybrid** proof‑of‑concept:
+
+https://github.com/viplavfauzdar/aisecops-runtime-gateway-hybrid
+
+In that architecture:
+
+```
+OpenClaw → aisecops-openclaw-plugin → AISecOps Runtime Gateway → Policy Engine → Tool Runner
+```
+
+The gateway repository provides the backend services responsible for:
+
+- Policy evaluation
+- Risk scoring
+- Approval workflows
+- Tool execution sandboxing
+- Audit logging
+- Correlation ID propagation
+
+The OpenClaw plugin acts as a **thin transport adapter** that forwards tool requests from OpenClaw to the AISecOps runtime gateway.
+
+### Current Direction
+
+The gateway project served as the **initial proof‑of‑concept backend**.  
+Current development is moving toward a more **framework‑agnostic AISecOps Interceptor**, which will support multiple agent frameworks such as:
+
+- OpenClaw
+- LangGraph
+- CrewAI
+- Custom agent runtimes
+
+In that model:
+
+```
+Agent Framework
+      ↓
+AISecOps Interceptor
+      ↓
+Policy Engine / Risk / Approval
+      ↓
+Tool Execution
+```
+
+The OpenClaw plugin remains a supported **integration adapter** within this broader architecture.
+
+---
+
 ## 🎯 Purpose
 
 This plugin turns OpenClaw into a **policy‑aware enterprise agent** by:
